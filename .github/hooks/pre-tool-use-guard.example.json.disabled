@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "hooks": {
+    "preToolUse": [
+      {
+        "type": "command",
+        "matcher": "bash|powershell",
+        "bash": "bash .github/hooks/scripts/pre-tool-use-guard.sh",
+        "powershell": "pwsh -NoProfile -File .github/hooks/scripts/pre-tool-use-guard.ps1",
+        "cwd": ".",
+        "timeoutSec": 5
+      }
+    ]
+  }
+}
